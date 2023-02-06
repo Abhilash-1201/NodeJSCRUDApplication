@@ -4,7 +4,7 @@ pipeline{
                   //registry2 = "519852036875.dkr.ecr.us-east-2.amazonaws.com/cloudjournee:${env.BUILD_NUMBER}"
                   
                 //}
-    tools {nodejs "nodejs"}
+    //tools {nodejs "nodejs"}
     
     stages{
         stage('code checkout from GitHub'){
