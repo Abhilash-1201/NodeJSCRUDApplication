@@ -32,7 +32,7 @@ pipeline{
             steps {
                 script {
                     
-                    def qg = sh(returnStdout: true, script: 'curl -s -u admin:abhi "http://18.188.191.129:9000/api/qualitygates/project_status?projectKey=nodejsproject" | jq -r .projectStatus.status').trim()
+                    def qg = sh(returnStdout: true, script: 'curl -s -u admin:abhi "http://18.216.8.211:9000/api/qualitygates/project_status?projectKey=nodejsproject" | jq -r .projectStatus.status').trim()
                     
                    if (qg == 'ERROR') {
                       slackSend color: '#FF0000', message: 'SonarQube Analysis failed. View the report at\n\nSonarQube Analysis Report : http://18.224.3.77:9000/dashboard?id=maven\n\nGuest Username: guest01\n\nGuest Password: guest01'
