@@ -46,6 +46,11 @@ pipeline{
                   }
               }
           }    
+        stage('Install Project Dependencies'){
+            steps{
+                  sh "npm install"
+            }
+        }
      //  stage('Build success email notification ') {
      //      steps {
      //        mail to: "abhilash.rl@cloudjournee.com",
